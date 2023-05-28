@@ -7,23 +7,30 @@ const ContactUs = () => {
         <span className='subheading'>Contáctanos</span>
         <h2 className='heading-secondary'>Envíanos un mensaje</h2>
         <div className='contact-grid'>
-          <form className='contact-form'>
+          <form className='contact-form netlify' name='contact'>
             <div className='form-group'>
               <input
                 type='text'
                 id='name'
+                name='Nombre y apellido'
                 placeholder='Nombre y Apellido'
                 required
               />
               <label htmlFor='name'>Nombre y Apellido</label>
             </div>
             <div className='form-group'>
-              <input type='email' id='email' placeholder='Tu correo' required />
+              <input
+                type='email'
+                id='email'
+                name='Email'
+                placeholder='Tu correo'
+                required
+              />
               <label htmlFor='email'>Email</label>
             </div>
             <textarea
-              name='mensaje'
               id='mensaje'
+              name='Mensaje'
               cols='30'
               rows='10'
               placeholder='Tu mensaje...'
