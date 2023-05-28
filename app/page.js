@@ -1,4 +1,4 @@
-import Hero from '@/components/hero'
+import Hero from '@/components/Hero'
 import Simuladores from '@/components/Simuladores'
 import Services from '@/components/Services'
 import ContactUs from '@/components/ContactUs'
