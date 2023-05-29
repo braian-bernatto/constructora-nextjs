@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 
 const ContactUs = () => {
@@ -43,7 +44,7 @@ const ContactUs = () => {
               placeholder='Tu mensaje...'
               required
             ></textarea>
-            <button id='form-button' className='primary-btn btn' type='submit'>
+            <button className='primary-btn btn' type='submit'>
               Enviar
             </button>
           </form>
