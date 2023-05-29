@@ -11,7 +11,7 @@ const ContactUs = () => {
             className='contact-form'
             name='constructora-form'
             method='POST'
-            netlify
+            data-netlify='true'
           >
             <div className='form-group'>
               <input
