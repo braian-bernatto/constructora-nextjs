@@ -18,8 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='es'>
-      <body className={rubik.className}>{children}</body>
-      {/* <Footer /> */}
+      <body className={rubik.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

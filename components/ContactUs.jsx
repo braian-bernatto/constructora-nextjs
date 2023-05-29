@@ -10,21 +10,23 @@ const ContactUs = () => {
           <form className='contact-form netlify' name='contact'>
             <div className='form-group'>
               <input
-                type='text'
                 id='name'
                 name='Nombre y apellido'
+                type='text'
                 placeholder='Nombre y Apellido'
                 required
+                autoComplete='true'
               />
               <label htmlFor='name'>Nombre y Apellido</label>
             </div>
             <div className='form-group'>
               <input
-                type='email'
                 id='email'
                 name='Email'
+                type='email'
                 placeholder='Tu correo'
                 required
+                autoComplete='true'
               />
               <label htmlFor='email'>Email</label>
             </div>
@@ -36,7 +38,7 @@ const ContactUs = () => {
               placeholder='Tu mensaje...'
               required
             ></textarea>
-            <button className='primary-btn btn' type='submit'>
+            <button id='form-button' className='primary-btn btn' type='submit'>
               Enviar
             </button>
           </form>
