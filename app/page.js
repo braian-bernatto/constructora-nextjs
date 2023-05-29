@@ -6,13 +6,13 @@ import Wave from '@/components/Wave'
 
 export default function Home() {
   return (
-    <main className='main'>
+    <>
       <Hero />
       <Simuladores />
       <Wave>
         <Services />
       </Wave>
       <ContactUs />
-    </main>
+    </>
   )
 }
