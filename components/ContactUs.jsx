@@ -17,7 +17,7 @@ const ContactUs = () => {
             <div className='form-group'>
               <input
                 id='name'
-                name='Nombre y apellido'
+                name='nombre'
                 type='text'
                 placeholder='Nombre y Apellido'
                 required
@@ -28,7 +28,7 @@ const ContactUs = () => {
             <div className='form-group'>
               <input
                 id='email'
-                name='Email'
+                name='email'
                 type='email'
                 placeholder='Tu correo'
                 required
@@ -38,7 +38,7 @@ const ContactUs = () => {
             </div>
             <textarea
               id='mensaje'
-              name='Mensaje'
+              name='mensaje'
               cols='30'
               rows='10'
               placeholder='Tu mensaje...'
