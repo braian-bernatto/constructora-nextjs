@@ -1,4 +1,6 @@
 import React from 'react'
+import PrimaryButton from './PrimaryButton'
+import Link from 'next/link'
 
 const Services = () => {
   return (
@@ -120,7 +122,9 @@ const Services = () => {
             </li>
           </ul>
         </div>
-        <button className='primary-btn btn'>Contáctanos</button>
+        <Link href={'#contact-us'}>
+          <PrimaryButton outline='true' label='Contáctanos' />
+        </Link>
       </div>
     </section>
   )
