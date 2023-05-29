@@ -7,7 +7,7 @@ const ContactUs = () => {
         <span className='subheading'>Contáctanos</span>
         <h2 className='heading-secondary'>Envíanos un mensaje</h2>
         <div className='contact-grid'>
-          <form className='contact-form netlify' name='contact'>
+          <form className='contact-form' name='contact' method='POST' netlify>
             <div className='form-group'>
               <input
                 id='name'
