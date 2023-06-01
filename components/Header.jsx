@@ -1,15 +1,33 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
-import { useInView } from 'react-intersection-observer'
+import React, { useEffect } from 'react'
 
 const Header = () => {
-  const { ref, inView, entry } = useInView({
-    threshold: 1
-  })
+  useEffect(() => {
+    // sticky navigation at intersection
+    const sectionHeroEl = document.querySelector('.hero')
+    const obs = new IntersectionObserver(
+      entries => {
+        const ent = entries[0]
+        if (!ent.isIntersecting) {
+          document.body.classList.add('sticky')
+        }
+        if (ent.isIntersecting) {
+          document.body.classList.remove('sticky')
+        }
+      },
+      {
+        // in the viewport
+        root: null,
+        threshold: 0,
+        rootMargin: '-90px'
+      }
+    )
+    obs.observe(sectionHeroEl)
+  }, [])
+
   return (
-    <header ref={ref} className={`header ${inView ? 'sticky' : ''}`}>
-      <h2>{`Header inside viewport ${inView}.`}</h2>
+    <header className={`header`}>
       <Image
         className='logo'
         width={100}

@@ -1,6 +1,3 @@
-'use client'
-import React from 'react'
-
 const ContactUs = () => {
   return (
     <section id='contact-us' className='contact-us'>
