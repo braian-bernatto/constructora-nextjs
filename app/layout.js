@@ -1,6 +1,5 @@
 import './css/globals.css'
 import './css/style.css'
-import './css/medias.css'
 import Footer from '@/components/Footer'
 import { Rubik } from 'next/font/google'
 import Header from '@/components/Header'
