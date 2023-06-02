@@ -13,8 +13,8 @@ const Services = () => {
         <div className='items-container'>
           <p className='items-description'>
             Podes dejar a nuestro cargo la elaboración de tu carpeta para poner
-            a tu disposición todos los documentos requeridos para dicho trámite.
-            La carpeta incluye:
+            a tu disposición todos los documentos necesarios! La carpeta
+            incluye:
           </p>
 
           <ul className='items-list dots-white'>
