@@ -1,4 +1,3 @@
-import './css/globals.css'
 import './css/style.css'
 import Footer from '@/components/Footer'
 import { Rubik } from 'next/font/google'
