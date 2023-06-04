@@ -1,9 +1,11 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Header = () => {
+  const [navOpen, setNavOpen] = useState(false)
+
   useEffect(() => {
     // sticky navigation at intersection
     const sectionHeroEl = document.querySelector('.hero')
@@ -28,7 +30,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`header`}>
+    <header className={`header ${navOpen ? 'nav-open' : ''} `}>
       <Link href={'#'} className='logo'>
         <Image
           className='logo'
@@ -42,18 +44,59 @@ const Header = () => {
       <nav className='nav-container'>
         <ul className='nav-list'>
           <li>
-            <Link href={'#simuladores'}>Simuladores</Link>
+            <Link href={'#simuladores'} onClick={() => setNavOpen(false)}>
+              Simuladores
+            </Link>
           </li>
           <li>
-            <Link href={'#services'}>Servicios </Link>
+            <Link href={'#services'} onClick={() => setNavOpen(false)}>
+              Servicios{' '}
+            </Link>
           </li>
           <li>
-            <Link className='btn primary-btn' href={'#contact-us'}>
+            <Link
+              className='btn primary-btn'
+              href={'#contact-us'}
+              onClick={() => setNavOpen(false)}
+            >
               Contáctanos
             </Link>
           </li>
         </ul>
       </nav>
+
+      <button className='btn-mobile-nav' onClick={() => setNavOpen(!navOpen)}>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={1.5}
+          stroke='currentColor'
+          name='open-button'
+          className='icon-mobile-nav'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+          />
+        </svg>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={1.5}
+          stroke='currentColor'
+          name='close-button'
+          className='icon-mobile-nav'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M6 18L18 6M6 6l12 12'
+          />
+        </svg>
+      </button>
     </header>
   )
 }
