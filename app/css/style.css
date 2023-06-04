@@ -5,6 +5,10 @@
 /* ********************************************* */
 .header {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
   width: 100%;
   background-color: var(--gray-medium-transparent);
   padding: 0 2rem;
@@ -24,16 +28,49 @@
 }
 
 .logo {
+  display: block;
   width: 80px;
   height: 80px;
+}
+
+/* ********************************************* */
+/* NAVIGATION */
+/* ********************************************* */
+.nav-container {
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 4rem;
+}
+
+.nav-list a {
+  transition: all 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:active,
+.nav-list a:focus {
+  color: white;
+}
+
+.nav-list a.btn.primary-btn {
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 1.5rem 1.7rem;
 }
 
 /* ********************************************* */
 /* HERO */
 /* ********************************************* */
 .hero {
-  margin-top: 4.8rem;
   padding: 9.6rem 0;
+  padding-top: 12.8rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;

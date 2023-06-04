@@ -2,7 +2,7 @@ import React from 'react'
 
 const Simuladores = () => {
   return (
-    <section className='simuladores'>
+    <section id='simuladores' className='simuladores'>
       <div className='container'>
         <span className='subheading'>simuladores</span>
         <h2 className='heading-secondary'>

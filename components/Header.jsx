@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect } from 'react'
 
 const Header = () => {
@@ -28,13 +29,31 @@ const Header = () => {
 
   return (
     <header className={`header`}>
-      <Image
-        className='logo'
-        width={100}
-        height={100}
-        src={'next.svg'}
-        alt='logo'
-      />
+      <Link href={'#'} className='logo'>
+        <Image
+          className='logo'
+          width={100}
+          height={100}
+          src={'next.svg'}
+          alt='logo'
+        />
+      </Link>
+
+      <nav className='nav-container'>
+        <ul className='nav-list'>
+          <li>
+            <Link href={'#simuladores'}>Simuladores</Link>
+          </li>
+          <li>
+            <Link href={'#services'}>Servicios </Link>
+          </li>
+          <li>
+            <Link className='btn primary-btn' href={'#contact-us'}>
+              Contáctanos
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 }
