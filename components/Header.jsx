@@ -29,27 +29,17 @@ const Header = () => {
     obs.observe(sectionHeroEl)
 
     // Smooth scrolling animation
-    const allLinks = document.querySelectorAll('a:link')
-    allLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault()
-        const href = link.getAttribute('href')
+    const logoLink = document.querySelector('a:link.logo')
+    logoLink.addEventListener('click', e => {
+      e.preventDefault()
+      const href = logoLink.getAttribute('href')
 
-        // scroll back to the top
-        if (href === '#')
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          })
-
-        // scroll to other links
-        if (href !== '#' && href.startsWith('#')) {
-          const sectionEl = document.querySelector(href)
-          sectionEl.scrollIntoView({
-            behavior: 'smooth'
-          })
-        }
-      })
+      // scroll back to the top
+      if (href === '#')
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
     })
   }, [])
 
@@ -68,12 +58,20 @@ const Header = () => {
       <nav className='nav-container'>
         <ul className='nav-list'>
           <li>
-            <Link href={'#simuladores'} onClick={() => setNavOpen(false)}>
+            <Link
+              href={'#simuladores'}
+              onClick={() => setNavOpen(false)}
+              prefetch={false}
+            >
               Simuladores
             </Link>
           </li>
           <li>
-            <Link href={'#services'} onClick={() => setNavOpen(false)}>
+            <Link
+              href={'#services'}
+              onClick={() => setNavOpen(false)}
+              prefetch={false}
+            >
               Servicios{' '}
             </Link>
           </li>
@@ -82,6 +80,7 @@ const Header = () => {
               className='btn primary-btn'
               href={'#contact-us'}
               onClick={() => setNavOpen(false)}
+              prefetch={false}
             >
               Contáctanos
             </Link>
