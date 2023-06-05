@@ -23,14 +23,14 @@ const Header = () => {
         // in the viewport
         root: null,
         threshold: 0,
-        rootMargin: '-90px'
+        rootMargin: '-80px'
       }
     )
     obs.observe(sectionHeroEl)
   }, [])
 
   return (
-    <header className={`header ${navOpen ? 'nav-open' : ''} `}>
+    <header className={`header ${navOpen ? 'nav-open' : ''}`}>
       <Link href={'#'} className='logo'>
         <Image
           className='logo'

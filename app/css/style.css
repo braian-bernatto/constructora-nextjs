@@ -1,17 +1,15 @@
 @import './globals.css';
 
 /* ********************************************* */
-/* HERO */
+/* HEADER */
 /* ********************************************* */
 .header {
-  position: absolute;
   display: flex;
+  position: relative;
   justify-content: space-between;
-  gap: 1rem;
   align-items: center;
-  width: 100%;
   background-color: var(--gray-medium-transparent);
-  padding: 0 2rem;
+  padding: 0 4.8rem;
   height: 8rem;
   z-index: 9999;
 }
@@ -21,6 +19,7 @@
   top: 0;
   bottom: 0;
   width: 100%;
+  height: 8rem;
   padding-top: 0;
   padding-bottom: 0;
   z-index: 999;
@@ -35,16 +34,12 @@
 /* ********************************************* */
 /* NAVIGATION */
 /* ********************************************* */
-.nav-container {
-  font-size: 1.6rem;
-  width: 100%;
-}
-
 .nav-list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  font-size: 1.8rem;
   gap: 4rem;
 }
 
@@ -60,8 +55,8 @@
 
 .nav-list a.btn.primary-btn {
   margin: 0;
-  font-size: 1.5rem;
   padding: 1.2rem 1.5rem;
+  font-size: inherit;
 }
 /* FIXED NAVIGATION */
 .btn-mobile-nav {
@@ -83,12 +78,15 @@
   display: none;
 }
 
+.sticky .hero {
+  margin-top: 8rem;
+}
+
 /* ********************************************* */
 /* HERO */
 /* ********************************************* */
 .hero {
   padding: 9.6rem 0;
-  padding-top: 12.8rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -634,6 +632,10 @@
 /* BELOW 544px (Smartphones) */
 /* ********************************************* */
 @media (max-width: 34em) {
+  .hero {
+    padding: 2rem;
+  }
+
   .house {
     transform: scale(0.8);
   }
@@ -667,13 +669,9 @@
   }
 
   /* MOBILE NAVIGATION */
-  .header {
-    height: 50px;
-  }
-
   .btn-mobile-nav {
     position: sticky;
-    display: flex;
+    display: block;
     z-index: 999;
     top: 0;
     right: 0;
@@ -686,11 +684,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100vh;
 
     /* out of the viewport and smooth animation */
     transform: translateX(100%);
@@ -720,7 +718,8 @@
 
   .nav-list {
     flex-direction: column;
-    gap: 4.8rem;
+    font-size: 2.4rem;
+    gap: 6.4rem;
   }
 
   .nav-list a:not(.primary-btn):hover,
