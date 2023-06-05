@@ -61,7 +61,7 @@ const Header = () => {
             <Link
               href={'#simuladores'}
               onClick={() => setNavOpen(false)}
-              prefetch={false}
+              scroll={false}
             >
               Simuladores
             </Link>
@@ -70,7 +70,7 @@ const Header = () => {
             <Link
               href={'#services'}
               onClick={() => setNavOpen(false)}
-              prefetch={false}
+              scroll={false}
             >
               Servicios{' '}
             </Link>
@@ -80,7 +80,7 @@ const Header = () => {
               className='btn primary-btn'
               href={'#contact-us'}
               onClick={() => setNavOpen(false)}
-              prefetch={false}
+              scroll={false}
             >
               Contáctanos
             </Link>
