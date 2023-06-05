@@ -27,6 +27,30 @@ const Header = () => {
       }
     )
     obs.observe(sectionHeroEl)
+
+    // Smooth scrolling animation
+    const allLinks = document.querySelectorAll('a:link')
+    allLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault()
+        const href = link.getAttribute('href')
+
+        // scroll back to the top
+        if (href === '#')
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          })
+
+        // scroll to other links
+        if (href !== '#' && href.startsWith('#')) {
+          const sectionEl = document.querySelector(href)
+          sectionEl.scrollIntoView({
+            behavior: 'smooth'
+          })
+        }
+      })
+    })
   }, [])
 
   return (
