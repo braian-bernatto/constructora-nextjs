@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <header className={`header ${navOpen ? 'nav-open' : ''}`}>
-      <Link href={'#'} className='logo'>
+      <a href={'#'} className='logo'>
         <Image
           className='logo'
           width={100}
@@ -53,37 +53,28 @@ const Header = () => {
           src={'next.svg'}
           alt='logo'
         />
-      </Link>
+      </a>
 
       <nav className='nav-container'>
         <ul className='nav-list'>
           <li>
-            <Link
-              href={'#simuladores'}
-              onClick={() => setNavOpen(false)}
-              scroll={false}
-            >
+            <a href={'#simuladores'} onClick={() => setNavOpen(false)}>
               Simuladores
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              href={'#services'}
-              onClick={() => setNavOpen(false)}
-              scroll={false}
-            >
+            <a href={'#services'} onClick={() => setNavOpen(false)}>
               Servicios{' '}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
+            <a
               className='btn primary-btn'
               href={'#contact-us'}
               onClick={() => setNavOpen(false)}
-              scroll={false}
             >
               Contáctanos
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
