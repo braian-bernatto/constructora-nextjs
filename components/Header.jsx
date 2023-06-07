@@ -1,8 +1,11 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const pathname = usePathname()
   const [navOpen, setNavOpen] = useState(false)
 
   useEffect(() => {
@@ -28,23 +31,23 @@ const Header = () => {
     obs.observe(sectionHeroEl)
 
     // Smooth scrolling animation
-    const logoLink = document.querySelector('a:link.logo')
-    logoLink.addEventListener('click', e => {
-      e.preventDefault()
-      const href = logoLink.getAttribute('href')
+    // const logoLink = document.querySelector('a:link.logo')
+    // logoLink.addEventListener('click', e => {
+    //   e.preventDefault()
+    //   const href = logoLink.getAttribute('href')
 
-      // scroll back to the top
-      if (href === '#')
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        })
-    })
+    //   // scroll back to the top
+    //   if (href === '/')
+    //     window.scrollTo({
+    //       top: 0,
+    //       behavior: 'smooth'
+    //     })
+    // })
   }, [])
 
   return (
     <header className={`header ${navOpen ? 'nav-open' : ''}`}>
-      <a href={'#'} className='logo'>
+      <Link href={'#'} className='logo'>
         <Image
           className='logo'
           width={100}
@@ -52,20 +55,29 @@ const Header = () => {
           src={'next.svg'}
           alt='logo'
         />
-      </a>
+      </Link>
 
       <nav className='nav-container'>
         <ul className='nav-list'>
-          <li>
-            <a href={'#simuladores'} onClick={() => setNavOpen(false)}>
-              Simuladores
-            </a>
-          </li>
-          <li>
-            <a href={'#services'} onClick={() => setNavOpen(false)}>
-              Servicios{' '}
-            </a>
-          </li>
+          {pathname !== '/' && (
+            <>
+              <li>
+                <a href={'#simuladores'} onClick={() => setNavOpen(false)}>
+                  Simuladores
+                </a>
+              </li>
+              <li>
+                <a href={'#services'} onClick={() => setNavOpen(false)}>
+                  Servicios{' '}
+                </a>
+              </li>
+            </>
+          )}
+          {pathname !== '/tu-casa' && (
+            <li>
+              <Link href={'/tu-casa'}>Tu casa</Link>
+            </li>
+          )}
           <li>
             <a
               className='btn primary-btn'

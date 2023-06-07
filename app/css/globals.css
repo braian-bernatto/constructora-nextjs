@@ -74,7 +74,6 @@ a {
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  scroll-behavior: smooth !important;
 }
 
 body {
@@ -302,4 +301,12 @@ input[type='number'] {
 
 .primary-btn-oultine:hover {
   background-position: right;
+}
+
+.secondary-btn {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 4px solid var(--yellow-darken);
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
 }
