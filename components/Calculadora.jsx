@@ -4,12 +4,14 @@ import React from 'react'
 import House from './House'
 import HouseTypeCards from './HouseTypeCards'
 import { useAtom } from 'jotai'
-import { precioTotalCasaAtom } from '@/lib/atoms'
+import { precioTotalCarpetaAtom, precioTotalCasaAtom } from '@/lib/atoms'
 import { usePathname } from 'next/navigation'
 
 const Calculadora = () => {
-  const precioTotal = useAtom(precioTotalCasaAtom)
   const pathname = usePathname()
+  const precioTotal = useAtom(
+    pathname === '/' ? precioTotalCarpetaAtom : precioTotalCasaAtom
+  )
 
   return (
     <div className='calculator-container'>
