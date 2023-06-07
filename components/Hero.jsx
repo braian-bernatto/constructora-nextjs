@@ -24,9 +24,11 @@ const Hero = () => {
         {pathname === '/' ? carpeta : house}
       </h1>
       <Calculadora />
-      <a href={'#contact-us'}>
-        <PrimaryButton outline={true} label='Contáctanos' />
-      </a>
+      <span className='center-flex'>
+        <a href={'#contact-us'}>
+          <PrimaryButton outline={true} label='Contáctanos' />
+        </a>
+      </span>
     </section>
   )
 }

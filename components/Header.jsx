@@ -29,20 +29,6 @@ const Header = () => {
       }
     )
     obs.observe(sectionHeroEl)
-
-    // Smooth scrolling animation
-    // const logoLink = document.querySelector('a:link.logo')
-    // logoLink.addEventListener('click', e => {
-    //   e.preventDefault()
-    //   const href = logoLink.getAttribute('href')
-
-    //   // scroll back to the top
-    //   if (href === '/')
-    //     window.scrollTo({
-    //       top: 0,
-    //       behavior: 'smooth'
-    //     })
-    // })
   }, [])
 
   return (

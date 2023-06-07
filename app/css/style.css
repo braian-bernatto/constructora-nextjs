@@ -8,10 +8,11 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--gray-medium-transparent);
+  background-color: hsl(0, 0%, 100%, 0.98);
   padding: 0 4.8rem;
   height: 8rem;
   z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sticky .header {
@@ -50,13 +51,19 @@
 .nav-list a:hover,
 .nav-list a:active,
 .nav-list a:focus {
-  color: white;
+  color: var(--yellow-darken);
 }
 
 .nav-list a.btn.primary-btn {
   margin: 0;
   padding: 1.2rem 1.5rem;
   font-size: inherit;
+}
+
+.nav-list a.btn.primary-btn:hover,
+.nav-list a.btn.primary-btn:active,
+.nav-list a.btn.primary-btn:focus {
+  color: white;
 }
 /* FIXED NAVIGATION */
 .btn-mobile-nav {
