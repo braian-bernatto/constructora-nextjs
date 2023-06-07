@@ -1,7 +1,6 @@
 import React from 'react'
 import Calculadora from './Calculadora'
 import PrimaryButton from './PrimaryButton'
-import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -11,9 +10,9 @@ const Hero = () => {
         construir la casa de tus sueños!
       </h1>
       <Calculadora />
-      <Link href={'#contact-us'}>
+      <a href={'#contact-us'}>
         <PrimaryButton outline={true} label='Contáctanos' />
-      </Link>
+      </a>
     </section>
   )
 }
