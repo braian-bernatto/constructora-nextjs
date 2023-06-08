@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <header className={`header ${navOpen ? 'nav-open' : ''}`}>
-      <Link href={'#'} className='logo'>
+      <Link href={'/'} className='logo'>
         <Image
           className='logo'
           width={100}
