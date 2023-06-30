@@ -42,7 +42,7 @@ medium= 0.4rem
 :root {
   --yellow: hsl(51, 94%, 64%);
   --yellow-darken: hsl(51, 94%, 40%);
-  --gray: #555;
+  --gray: hwb(0 33% 67%);
   --gray-medium: #999;
   --gray-medium-transparent: hsla(0, 0%, 60%, 0.639);
   --gray-light: hsl(210, 14%, 83%);
