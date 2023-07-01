@@ -4,7 +4,7 @@ const Footer = () => {
       <div className='container'>
         Copyright &copy;{' '}
         <span className='year'>{new Date().getFullYear()}</span>&nbsp;
-        <a href='#'>Bernatto Inc.</a>
+        <a href='https://braian-bernatto.github.io/portfolio/'>Bernatto Inc.</a>
       </div>
     </footer>
   )

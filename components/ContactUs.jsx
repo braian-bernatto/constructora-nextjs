@@ -59,9 +59,9 @@ const ContactUs = () => {
                   fillRule='evenodd'
                 />
               </svg>
-              +595962 311 965
+              +595 962 311 965
             </a>
-            <a href='mailto:#' className='contact-group'>
+            <a href='mailto:ceo.consultas@gmail.com' className='contact-group'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon'
@@ -84,7 +84,7 @@ const ContactUs = () => {
                 <circle cx='431.95' cy='128.05' r='47.95' />
                 <path d='M432 192a63.95 63.95 0 1163.95-63.95A64 64 0 01432 192zm0-95.9a32 32 0 1031.95 32 32 32 0 00-31.95-32z' />
               </svg>
-              correo@correo.com
+              ceo.consultas@gmail.com
             </a>
           </div>
         </div>
