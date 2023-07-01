@@ -9,7 +9,7 @@ const rubik = Rubik({
 })
 
 export const metadata = {
-  title: 'Bernatto | Constructora',
+  title: 'CEO | Carpeta',
   description:
     'Nos encargamos de elaborar tu carpeta de obra para solicitar tu préstamo del banco!'
 }
