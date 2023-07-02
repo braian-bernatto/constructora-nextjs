@@ -48,7 +48,7 @@ const ContactUs = () => {
             </button>
           </form>
           <div className='contact-box'>
-            <a href='https://wa.me/+595962311965' className='contact-group'>
+            <a href='https://wa.me/+595962334028' className='contact-group'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon'
@@ -59,7 +59,7 @@ const ContactUs = () => {
                   fillRule='evenodd'
                 />
               </svg>
-              +595 962 311 965
+              +595 962 334 028
             </a>
             <a href='mailto:ceo.consultas@gmail.com' className='contact-group'>
               <svg
