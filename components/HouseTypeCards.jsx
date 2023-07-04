@@ -32,7 +32,7 @@ const HouseTypeCards = () => {
                 d='M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
               />
             </svg>
-            Cisterna baja
+            Estructura confinada
           </li>
           <li>
             <svg
@@ -49,7 +49,7 @@ const HouseTypeCards = () => {
                 d='M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
               />
             </svg>
-            Lavamanos normal
+            Cerámicas
           </li>
           <li className='unavailable'>
             <svg
@@ -66,7 +66,7 @@ const HouseTypeCards = () => {
                 d='M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
               />
             </svg>
-            Termocalefón
+            Equipamientos
           </li>
         </ul>
       </span>
@@ -95,7 +95,7 @@ const HouseTypeCards = () => {
                 d='M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
               />
             </svg>
-            Cisterna baja
+            Mampostería estructural
           </li>
           <li>
             <svg
@@ -112,7 +112,7 @@ const HouseTypeCards = () => {
                 d='M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
               />
             </svg>
-            Lavamanos granito
+            Porcelanatos
           </li>
           <li>
             <svg
@@ -129,7 +129,7 @@ const HouseTypeCards = () => {
                 d='M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
               />
             </svg>
-            Termocalefón
+            Equipamientos
           </li>
         </ul>
       </span>
