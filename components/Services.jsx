@@ -122,9 +122,9 @@ const Services = () => {
             </li>
           </ul>
         </div>
-        <Link href={'#contact-us'}>
+        <a href={'#contact-us'}>
           <PrimaryButton outline='true' label='Contáctanos' />
-        </Link>
+        </a>
       </div>
     </section>
   )
